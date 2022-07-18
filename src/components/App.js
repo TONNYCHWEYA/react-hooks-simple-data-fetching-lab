@@ -14,7 +14,12 @@ function App(){
  
   if (!image) return <p>Loading...</p>;
   return (
-    <img src={image} alt="A Random Dog"/>
+    <>
+     {image === null ? (
+        <p>Loading...</p>
+      ) : (
+    <img src={image} alt="A Random Dog"/>)}
+    </>
   );
 }
 
